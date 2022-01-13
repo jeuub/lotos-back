@@ -22,7 +22,7 @@ exports.postCheckOutHandler = async (req, res) => {
         });
         res.status(200).json('successful')
     }catch(e) {
-        res.status(400).json('unsuccessful')
+        res.status(400).json('unsuccessful', e)
     }
 }
 
