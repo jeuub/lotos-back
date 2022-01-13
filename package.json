@@ -1,0 +1,20 @@
+{
+  "name": "lotos-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eiyub Bodur <71319621+jeuub@users.noreply.github.com>",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6"
+  }
+}
