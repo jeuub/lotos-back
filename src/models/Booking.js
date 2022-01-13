@@ -1,9 +1,5 @@
 const {Schema, model} = require('mongoose')
 
-const services = new Schema({
-    name:String
-})
-
 const BookingSchema =  new Schema({
     name:{
         type: String,
@@ -30,7 +26,7 @@ const BookingSchema =  new Schema({
         required:true,
     },
     services: [
-        services
+        String
     ]
 });
 
