@@ -1,8 +1,7 @@
 const {Schema, model} = require('mongoose')
 
 const services = new Schema({
-    name:String,
-    price: Number
+    name:String
 })
 
 const BookingSchema =  new Schema({

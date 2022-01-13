@@ -20,9 +20,9 @@ exports.postCheckOutHandler = async (req, res) => {
             homeType: req.body.homeType,
             services: req.body.services,
         });
-        res.status(200).json('success')
+        res.status(200).json('successful')
     }catch(e) {
-        console.log(e)
+        res.status(400).json('unsuccessful')
     }
 }
 
