@@ -32,12 +32,8 @@ exports.getAvailableDate = async (req, res) => {
 
     bookings.forEach((booking) => {
       if (
-        (Number(req.param("from")) < booking._doc.dateFrom &&
-          Number(req.param("to")) > booking._doc.dateFrom) ||
-        (Number(req.param("from")) > booking._doc.dateFrom &&
-          Number(req.param("to")) < booking._doc.dateTo) ||
-        (Number(req.param("from")) > booking._doc.dateFrom &&
-          Number(req.param("to")) > booking._doc.dateTo)
+        Number(req.param("from")) <= booking._doc.dateTo &&
+        Number(req.param("to")) >= booking._doc.dateFrom
       ) {
         busyBooking.push(booking._doc.home);
       }
